@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
-    <title>Gridea</title>
-    <updated>2020-03-04T09:34:39.009Z</updated>
+    <title>andywang425</title>
+    <updated>2020-03-04T09:35:54.908Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://andywang425.github.io/images/avatar.png</logo>
     <icon>https://andywang425.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, Gridea</rights>
+    <rights>All rights reserved 2020, andywang425</rights>
     <entry>
         <title type="html"><![CDATA[test]]></title>
         <id>https://andywang425.github.io/post/test/</id>
         <link href="https://andywang425.github.io/post/test/">
         </link>
         <updated>2020-03-04T09:27:14.000Z</updated>
-        <content type="html"><![CDATA[<p>123</p>
-]]></content>
     </entry>
 </feed>
