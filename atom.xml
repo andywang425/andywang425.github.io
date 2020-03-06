@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>andywang425</title>
-    <updated>2020-03-06T08:40:23.642Z</updated>
+    <updated>2020-03-06T11:34:39.513Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -11,10 +11,10 @@
     <icon>https://andywang425.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, andywang425</rights>
     <entry>
-        <title type="html"><![CDATA[test]]></title>
-        <id>https://andywang425.github.io/post/test/</id>
-        <link href="https://andywang425.github.io/post/test/">
+        <title type="html"><![CDATA[跳舞的线游戏原声]]></title>
+        <id>https://andywang425.github.io/post/DANCING_LINE_OST/</id>
+        <link href="https://andywang425.github.io/post/DANCING_LINE_OST/">
         </link>
-        <updated>2020-03-04T09:27:14.000Z</updated>
+        <updated>2020-03-06T11:02:04.000Z</updated>
     </entry>
 </feed>
