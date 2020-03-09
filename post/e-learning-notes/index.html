@@ -4,14 +4,11 @@
     <meta charset="utf-8" >
 
 <title>易语言学习笔记 | andywang425</title>
-<meta name="description" content="Everything will be all right &lt;font color=&#34;#FED731&#34;&gt;=)&lt;/font&gt;">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1583765475683">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="stylesheet" href="https://unpkg.com/papercss@1.6.1/dist/paper.min.css" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1583766218991">
 <link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
 
 
@@ -21,115 +18,67 @@
 
   
 
-<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
-
 
 <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
 
+
+    <meta name="description" content="觅风易语言全套视频教程
+源码
+1-5
+1.第一个程序
+2.仿qq登陆界面
+3.超简单计算器
+4.loading效果
+
+5.自动刷新网页
+这几个都没啥好讲的，都是基础。最近在52破解上看到一个用易语言写的steam多账号切换器，以后有空了好好..." />
+    <meta name="keywords" content="" />
   </head>
   <body>
-  
-    <nav class="navbar border fixed split-nav">
-  <div class="nav-brand">
-    <h3><a href="https://andywang425.github.io">andywang425</a></h3>
-  </div>
-  <div class="collapsible">
-    <input id="collapsible1" type="checkbox" name="collapsible1">
-    <button>
-      <label for="collapsible1">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </label>
-    </button>
-    <div class="collapsible-body">
-      <ul class="inline">
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://andywang425.github.io">
+        <img src="https://andywang425.github.io/images/avatar.png?v=1583766218991" class="site-logo">
+        <h1 class="site-title">andywang425</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
         
-          <li>
-            
-              <a href="https://andywang425.github.io" class="menu">
-                首页
-              </a>
-            
-          </li>
+          <a href="https://andywang425.github.io" class="site-nav">
+            首页
+          </a>
         
-          <li>
-            
-              <a href="/archives" class="menu">
-                归档
-              </a>
-            
-          </li>
+      
         
-          <li>
-            
-              <a href="/tags" class="menu">
-                标签
-              </a>
-            
-          </li>
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
         
-          <li>
-            
-              <a href="/post/about" class="menu">
-                关于
-              </a>
-            
-          </li>
+      
         
-      </ul>
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
     </div>
   </div>
-</nav>
-
-    <div id="top" class="row site">
-      <div class="sm-12 md-8 col">
-        <div class="paper">
-          <article class="article">
-            <h1>易语言学习笔记</h1>
-            <p class="article-meta">
-              2020-03-09
-              
-            </p>
-            
-            <div class="post-content">
-              <p><a href="https://www.bilibili.com/video/av29459575">觅风易语言全套视频教程</a><br>
-<a href="https://github.com/andywang425/andywang425.github.io/tree/master/programming/e">源码</a></p>
-<h3 id="1-5">1-5</h3>
-
-            </div>
-          </article>
-        </div>
-        <div class="paper" data-aos="fade-in">
-          
-            <div class="next-post">
-              <div class="next">
-                下一篇
-              </div>
-              <a href="https://andywang425.github.io/post/e-resource/">
-                <h3 class="post-title">
-                  易语言相关资源
-                </h3>
-              </a>
-            </div>
-          
-        </div>
-        
-          
-            <div class="paper" data-aos="fade-in">
-              <div id="gitalk-container"></div>
-            </div>
-          
-
-          
-        
-      </div>
-
-      <div class="sm-12 md-4 col sidebar">
-  <div class="paper info-container">
-    <img src="https://andywang425.github.io/images/avatar.png?v=1583765475683" class="no-responsive avatar">
-    <div class="text-muted">Everything will be all right <font color="#FED731">=)</font></div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
     <div class="social-container">
       
         
@@ -143,74 +92,76 @@
         
       
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      最新文章
+    <div class="site-description">
+      Everything will be all right <font color="#FED731">=)</font>
     </div>
-    <div class="row">
-      <ul>
-        
-          
-            <li>
-              <a href="https://andywang425.github.io/post/e-learning-notes/">易语言学习笔记</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://andywang425.github.io/post/e-resource/">易语言相关资源</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://andywang425.github.io/post/DANCING_LINE_OST/">跳舞的线游戏原声</a>
-            </li>
-          
-        
-          
-            <li>
-              <a href="https://andywang425.github.io/post/about/">关于</a>
-            </li>
-          
-        
-      </ul>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://andywang425.github.io/atom.xml" target="_blank">RSS</a>
     </div>
-  </div>
-  <div class="paper">
-    <div class="sidebar-title">
-      标签列表
-    </div>
-    <div class="row">
-      
-        <a href="https://andywang425.github.io/tag/VqPp91UJo/" class="badge secondary">
-          易语言
-        </a>
-      
-        <a href="https://andywang425.github.io/tag/AUrenmuie/" class="badge success">
-          跳舞的线
-        </a>
-      
-    </div>
-  </div>
-  <div class="paper">
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://andywang425.github.io/atom.xml" target="_blank">RSS</a>
   </div>
 </div>
 
 
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">易语言学习笔记</h2>
+            <div class="post-date">2020-03-09</div>
+            
+            <div class="post-content" v-pre>
+              <p><a href="https://www.bilibili.com/video/av29459575">觅风易语言全套视频教程</a><br>
+<a href="https://github.com/andywang425/andywang425.github.io/tree/master/programming/e">源码</a></p>
+<h3 id="1-5">1-5</h3>
+<p>1.第一个程序<br>
+2.仿qq登陆界面<br>
+3.超简单计算器<br>
+4.loading效果<br>
+<img src="https://andywang425.github.io/post-images/1583765954909.jpg" alt="" loading="lazy"><br>
+5.自动刷新网页<br>
+这几个都没啥好讲的，都是基础。最近在52破解上看到一个用易语言写的steam多账号切换器，以后有空了好好研究一下。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://andywang425.github.io/post/e-resource/">
+                  <h3 class="post-title">
+                    易语言相关资源
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
     </div>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
 <script type="application/javascript">
 
 AOS.init();
 
-hljs.initHighlightingOnLoad()
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
 </script>
+
+
 
 
 
