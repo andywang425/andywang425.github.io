@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>易语言相关资源 | andywang425</title>
+<title>[C语言]自动阅读英语小说 | andywang425</title>
 <link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1583936054598">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
@@ -87,30 +87,71 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    易语言相关资源
+                    [C语言]自动阅读英语小说
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-03-08 ·
+                        · 2020-03-11 ·
                     </time>
                     
-                        <a href="https://andywang425.github.io/tag/VqPp91UJo/" class="post-tags">
-                            # 易语言
+                        <a href="https://andywang425.github.io/tag/5D87hCSND/" class="post-tags">
+                            # C语言
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <h3 id="1相关工具">1.相关工具</h3>
-<p>易语言5.9，易用API伴侣，精易编程助手3.97，精易模块8.1.0，VC98linker<br>
-<a href="https://pan.baidu.com/s/1z2oTZP1q7JThWWwE5kkolg">https://pan.baidu.com/s/1z2oTZP1q7JThWWwE5kkolg</a><br>
-提取码：td84<br>
-感谢广大易友制作的模块及编程辅助软件</p>
-<h3 id="2相关网站">2.相关网站</h3>
-<ul>
-<li>官网 <a href="http://www.dywt.com.cn/">http://www.dywt.com.cn/</a></li>
-<li>易语言资源站 <a href="https://www.eyuyan.la/">https://www.eyuyan.la/</a></li>
-<li>易语言官方交流论坛 <a href="http://bbs.eyuyan.com/">http://bbs.eyuyan.com/</a></li>
-</ul>
+                    <p>最近学校要求上一个网站读英语小说：<br>
+<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
+于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。<a href="https://github.com/andywang425/andywang425.github.io/tree/master/programming/c">源码</a></p>
+<!-- more -->
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;Windows.h&gt; 
+#include &lt;conio.h&gt;
+ 
+//模拟鼠标点击  （x,y）是要点击的位置 
+void click(int x, int y)
+{
+	//将鼠标光标移动到 指定的位置     例子中屏幕分辨率1920x900  在鼠标坐标系统中，屏幕在水平和垂直方向上均匀分割成65535×65535个单元
+	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, x*65535/1920, y*65535/1080, 0, 0);
+	
+	Sleep(50);//稍微延时50ms 
+    mouse_event(MOUSEEVENTF_LEFTDOWN,0,0,0,0);//鼠标左键按下 
+    mouse_event(MOUSEEVENTF_LEFTUP,0,0,0,0);//鼠标左键抬起
+ }
+ void move(int a,int b)
+ {
+ 	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, a*65535/1920, b*65535/1080, 0, 0);
+ }
+ 
+void main()
+{
+	int x1=0,y1=0;
+	int x2=0,y2=0;
+	long int t=0;
+	printf(&quot;请先进入阅读界面并调整窗口位置和大小，保持窗口置顶并不遮挡按钮。\n&quot;);
+	printf(&quot;请输入点击位置坐标，用空格隔开。1920*1080分辨率为1800 550，\n若为其它分辨率请自行推算或用程序测量。\n&quot;) ;
+	scanf(&quot;%d %d&quot;,&amp;x1,&amp;y1); 
+	x2=x1;y2=y1;//dont change 
+	printf(&quot;请输入单页阅读时间，单位毫秒(建议写60000)。\n阅读过程中鼠标会自动移动以规避检测，单页阅读时间会略大于输入值。\n请不要输入一个很小的值，否则你的鼠标就动不了了。\n本程序需要用鼠标手动退出。\n&quot;);
+	scanf(&quot;%d&quot;,&amp;t);
+	printf(&quot;开始阅读。\n&quot;);
+	while(1)
+	{
+	click(x1,y1);
+	Sleep(t/2);
+	for(x1=x2;x1&gt;=100;x1--)
+	{ 
+		move(x1,y1);
+		Sleep(1);
+	} 
+	x1=x2;y1=y2;
+	Sleep(t/2); 
+ 
+	}	
+}
+</code></pre>
+<p>目前这个程序还很简单，以后有空再优化一下。</p>
 
                 </div>
             </article>
@@ -119,8 +160,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://andywang425.github.io/post/DANCING_LINE_OST/" class="post-title gt-a-link">
-                    跳舞的线游戏原声
+                <a href="https://andywang425.github.io/post/e-learning-notes/" class="post-title gt-a-link">
+                    易语言学习笔记
                 </a>
             </div>
         

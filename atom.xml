@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>andywang425</title>
-    <updated>2020-03-10T13:47:09.104Z</updated>
+    <updated>2020-03-11T14:14:18.325Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -10,6 +10,21 @@
     <logo>https://andywang425.github.io/images/avatar.png</logo>
     <icon>https://andywang425.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, andywang425</rights>
+    <entry>
+        <title type="html"><![CDATA[[C语言]自动阅读英语小说]]></title>
+        <id>https://andywang425.github.io/post/c-web-English-reading/</id>
+        <link href="https://andywang425.github.io/post/c-web-English-reading/">
+        </link>
+        <updated>2020-03-11T14:03:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>最近学校要求上一个网站读英语小说：<br>
+<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
+于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。<a href="https://github.com/andywang425/andywang425.github.io/tree/master/programming/c">源码</a></p>
+]]></summary>
+        <content type="html"><![CDATA[<p>最近学校要求上一个网站读英语小说：<br>
+<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
+于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。<a href="https://github.com/andywang425/andywang425.github.io/tree/master/programming/c">源码</a></p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[易语言学习笔记]]></title>
         <id>https://andywang425.github.io/post/e-learning-notes/</id>
@@ -30,5 +45,13 @@
         <link href="https://andywang425.github.io/post/DANCING_LINE_OST/">
         </link>
         <updated>2020-03-06T11:02:04.000Z</updated>
+        <summary type="html"><![CDATA[<h3 id="1all-about-us">1.all about us</h3>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=3&id=2065893939&auto=0&height=66"></iframe>  
+BPM = 84  
+]]></summary>
+        <content type="html"><![CDATA[<h3 id="1all-about-us">1.all about us</h3>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=3&id=2065893939&auto=0&height=66"></iframe>  
+BPM = 84  
+]]></content>
     </entry>
 </feed>
