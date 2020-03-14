@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-03-14T14:42:03.258Z</updated>
+    <updated>2020-03-14T14:44:59.629Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -12,10 +12,22 @@
     <rights>All rights reserved 2020, ANDY._.WANG</rights>
     <entry>
         <title type="html"><![CDATA[自动阅读二代]]></title>
-        <id>https://andywang425.github.io/post/zi-dong-yue-du-er-dai/</id>
-        <link href="https://andywang425.github.io/post/zi-dong-yue-du-er-dai/">
+        <id>https://andywang425.github.io/post/c-web-English-reading-2/</id>
+        <link href="https://andywang425.github.io/post/c-web-English-reading-2/">
         </link>
         <updated>2020-03-14T14:12:18.000Z</updated>
+        <summary type="html"><![CDATA[<p>这次我好好把这个程序完善了一下，优化如下：<br>
+1.每页阅读时间变准确了<br>
+2.提供两种阅读模式：顺序阅读和反复翻书<br>
+3.界面优化，更加好看<br>
+4.错误输入处理</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>这次我好好把这个程序完善了一下，优化如下：<br>
+1.每页阅读时间变准确了<br>
+2.提供两种阅读模式：顺序阅读和反复翻书<br>
+3.界面优化，更加好看<br>
+4.错误输入处理</p>
+]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[[C语言]自动阅读英语小说]]></title>

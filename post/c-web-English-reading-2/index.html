@@ -1,0 +1,600 @@
+<html>
+<head>
+    <meta charset="utf-8"/>
+<meta name="description" content=""/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>自动阅读二代 | ANDY._.WANG</title>
+<link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1584197096920">
+<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+<!-- DEMO JS -->
+<script src="media/scripts/index.js"></script>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+</head>
+<body>
+<div class="main gt-bg-theme-color-first">
+    <nav class="navbar navbar-expand-lg">
+    <div class="navbar-brand">
+        <img class="user-avatar" src="/images/avatar.png" alt="头像">
+        <div class="site-name gt-c-content-color-first">
+            ANDY._.WANG
+        </div>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="navbar-nav mr-auto" style="text-align: center">
+            
+                <div class="nav-item">
+                    
+                        <a href="https://andywang425.github.io" class="menu gt-a-link">
+                            首页
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/archives" class="menu gt-a-link">
+                            归档
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/tags" class="menu gt-a-link">
+                            标签
+                        </a>
+                    
+                </div>
+            
+                <div class="nav-item">
+                    
+                        <a href="/post/about" class="menu gt-a-link">
+                            关于
+                        </a>
+                    
+                </div>
+            
+        </div>
+    </div>
+</nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    自动阅读二代
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-03-14 ·
+                    </time>
+                    
+                </div>
+                <div class="post-content">
+                    <p>这次我好好把这个程序完善了一下，优化如下：<br>
+1.每页阅读时间变准确了<br>
+2.提供两种阅读模式：顺序阅读和反复翻书<br>
+3.界面优化，更加好看<br>
+4.错误输入处理</p>
+<!-- more -->
+<figure data-type="image" tabindex="1"><img src="https://andywang425.github.io/post-images/1584195474011.png" alt="" loading="lazy"></figure>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;Windows.h&gt; 
+#include &lt;conio.h&gt;
+ 
+int nScreenWidth, nScreenHeight;
+void click(int x, int y)
+{
+	//屏幕在水平和垂直方向上均匀分割成65535×65535个单元
+	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, x*65535/nScreenWidth, y*65535/nScreenHeight, 0, 0);
+	
+	Sleep(50);//稍微延时50ms 
+    mouse_event(MOUSEEVENTF_LEFTDOWN,0,0,0,0);//鼠标左键按下 
+    mouse_event(MOUSEEVENTF_LEFTUP,0,0,0,0);//鼠标左键抬起
+ }
+ void move(int x,int y)
+ {
+ 	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, x*65535/nScreenWidth, y*65535/nScreenHeight, 0, 0);
+ }
+ 
+void main()
+{
+	//HANDLE handle_color = GetStdHandle(STD_OUTPUT_HANDLE);
+	POINT ptB = { 0, 0 };
+	int choice1,choice2;	
+	char choice3,back;
+	int x=-1,y=-1,nochange_right_x,nochange_right_y,nochange_left_x,nochange_left_y;
+	float time;
+	int scan,scan2;
+	LPPOINT xy = &amp;ptB;	//位置变量
+	
+	backmenu:
+	system(&quot;title 自动阅读 by andywang&quot;) ;
+	printf(&quot;自动阅读 V2.0\n&quot;);
+	choose_again:
+	printf(&quot;1.顺序阅读模式\n&quot;);
+	printf(&quot;2.反复翻书模式\n&quot;);//72, 442 1920*1080下 
+	printf(&quot;3.更多信息\n&quot;);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+	printf(&quot;&gt;&gt;&quot;);
+	scanf(&quot;%d&quot;,&amp;choice1);
+	fflush(stdin);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |  FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+	switch((int)choice1)
+	{
+		case 1:		//1.顺序阅读 
+			c1_chooseagain:
+			printf(&quot;请先进入阅读界面并调整窗口位置和大小，窗口不能遮挡按钮。\n&quot;);
+			printf(&quot;请选择一种输入坐标的方式：\n&quot;);
+			printf(&quot;1.自动获取\n&quot;); 
+			printf(&quot;2.手动输入\n&quot;);
+			printf(&quot;9.返回主菜单\n&quot;);
+			nScreenWidth = GetSystemMetrics(SM_CXSCREEN);
+    		nScreenHeight = GetSystemMetrics(SM_CYSCREEN);
+    		printf(&quot;当前屏幕分辨率为：%d %d（可能因为设置了缩放与实际情况不符）\n&quot;, nScreenWidth, nScreenHeight);
+    		SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+    		printf(&quot;&gt;&gt;&quot;);
+			scanf(&quot;%d&quot;,&amp;choice2);
+			fflush(stdin);
+			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |  FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+			if(choice2==1)//自动 
+			{
+				printf(&quot;把鼠标移动到按钮上并按q获取位置，按e确认并结束。\n&quot;);
+				while(1)
+				{
+					choice3=getch();
+					if(choice3=='e')
+						break;
+					else if(choice3=='q')
+					{
+					GetCursorPos(xy);	
+					x=xy-&gt;x;y=xy-&gt;y;
+					printf(&quot;x=%d,y=%d\n&quot;,x ,y);
+					}
+				}
+				nochange_right_x=x;nochange_right_y=y;
+				printf(&quot;请输入单页阅读时间，单位秒(建议在60-120之间，至少为3)。\n&quot;);
+				while(1)
+				{
+				scan=scanf(&quot;%f&quot;,&amp;time);
+				fflush(stdin);
+				if(scan==0|time&lt;3)
+					{
+					printf(&quot;请重新输入：\n&quot;);
+					continue;
+					}
+				break;
+				}
+				
+				time=time *  1000 ;
+				printf(&quot;开始阅读。\n&quot;);
+				while(1)
+				{
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;点击%d,%d\n&quot;,x,y);
+					click(x,y);
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=nochange_right_x;x&gt;=100;x--)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					system(&quot;cls&quot;);
+				}
+    		}
+    		else if(choice2==2)		//手动 
+    		{
+    			printf(&quot;请输入右侧按钮逻辑坐标，用空格隔开。\n&quot;);
+    			
+				while(1)
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+    				printf(&quot;&gt;&gt;&quot;);
+					scan=scanf(&quot;%d&quot;,&amp;x);
+					scan2=scanf(&quot;%d&quot;,&amp;y);
+					fflush(stdin);
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+					if(scan==0|scan2==0|x&lt;0)
+						{
+						printf(&quot;请重新输入：\n&quot;);
+						continue;
+						}
+					break;
+				}
+				nochange_right_x=x;nochange_right_y=y;
+				printf(&quot;请输入单页阅读时间，单位秒(建议在60-120之间，至少为3)。\n&quot;);
+				while(1)
+				{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+				printf(&quot;&gt;&gt;&quot;);
+				scan=scanf(&quot;%f&quot;,&amp;time);
+				fflush(stdin);
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+				if(scan==0|time&lt;3)
+					{
+					printf(&quot;请重新输入：\n&quot;);
+					continue;
+					}
+				break;
+				}
+				
+				time=time *  1000 ;
+				printf(&quot;开始阅读。\n&quot;);
+				while(1)
+				{
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;点击%d,%d\n&quot;,x,y);
+					click(x,y);
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=nochange_right_x;x&gt;=100;x--)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					system(&quot;cls&quot;);
+				}
+			}
+			else if(choice2==9)
+			{
+				system(&quot;cls&quot;);
+				goto backmenu;
+			}
+			else
+			{
+				system(&quot;cls&quot;);
+				printf(&quot;未知选项，请重新输入:\n&quot;);
+				goto c1_chooseagain;
+			}
+		case 2:		//2.反复阅读 
+				c2_chooseagain:
+				printf(&quot;请先进入阅读界面并调整窗口位置和大小，窗口不能遮挡按钮。\n&quot;);
+				printf(&quot;请选择一种输入坐标的方式：\n&quot;);
+				printf(&quot;1.自动获取\n&quot;); 
+				printf(&quot;2.手动输入\n&quot;);
+				printf(&quot;9.返回主菜单\n&quot;);
+				nScreenWidth = GetSystemMetrics(SM_CXSCREEN);
+    			nScreenHeight = GetSystemMetrics(SM_CYSCREEN);
+    			printf(&quot;当前屏幕分辨率为：%d %d（可能因为设置了缩放与实际情况不符）\n&quot;, nScreenWidth, nScreenHeight);
+    			SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+    			printf(&quot;&gt;&gt;&quot;);
+				scanf(&quot;%d&quot;,&amp;choice2);
+				fflush(stdin);
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+				if(choice2==1)
+				{
+				chooseagain1:
+				printf(&quot;把鼠标移动到【右侧】按钮上并按q获取位置，按e确认并结束。\n&quot;);
+				while(1)
+				{
+					choice3=getch();
+					if(choice3=='e')
+						break;
+					else if(choice3=='q')
+					{
+					GetCursorPos(xy);	
+					x=xy-&gt;x;y=xy-&gt;y;
+					printf(&quot;x=%d,y=%d\n&quot;,x ,y);
+					}
+				}
+				nochange_right_x=x;nochange_right_y=y;
+				printf(&quot;把鼠标移动到【左侧】按钮上并按q获取位置，按e确认并结束。\n&quot;);
+				while(1)
+				{
+					choice3=getch();
+					if(choice3=='e')
+						break;
+					else if(choice3=='q')
+					{
+					GetCursorPos(xy);	
+					x=xy-&gt;x;y=xy-&gt;y;
+					printf(&quot;x=%d,y=%d\n&quot;,x ,y);
+					}
+				}
+				nochange_left_x=x;nochange_left_y=y;
+				if(nochange_left_x&gt;nochange_right_x)
+				{
+					printf(&quot;左右不分？你输入的左侧按钮坐标大于右侧按钮坐标\n&quot;);
+					goto chooseagain1;
+				}
+				printf(&quot;请输入单页阅读时间，单位秒(建议在60-120之间，至少为3)。\n&quot;);
+				while(1)
+				{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+				printf(&quot;&gt;&gt;&quot;);
+				scan=scanf(&quot;%f&quot;,&amp;time);
+				fflush(stdin);
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+				if(scan==0|time&lt;3)
+					{
+					printf(&quot;请重新输入：\n&quot;);
+					continue;
+					}
+				break;
+				}
+				
+				time=time *  1000 ;
+				printf(&quot;开始阅读。\n&quot;);
+				while(1)
+				{
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;点击右侧按钮%d,%d\n&quot;,x,y);
+					click(x,y);
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=nochange_right_x;x&gt;=100;x--)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					
+					//system(&quot;cls&quot;);
+									
+					x=nochange_left_x;y=nochange_left_y;
+					printf(&quot;点击左侧按钮%d,%d\n&quot;,x,y);
+					click(x,y);				
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=x;x&lt;=nScreenWidth-100;x++)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					system(&quot;cls&quot;);
+				}
+				}
+			if(choice2==2)
+			{
+				chooseagain2:
+				printf(&quot;请输入右侧按钮逻辑坐标，用空格隔开。\n&quot;);
+				while(1)
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+					printf(&quot;&gt;&gt;&quot;);
+					scan=scanf(&quot;%d&quot;,&amp;x);
+					scan2=scanf(&quot;%d&quot;,&amp;y);
+					fflush(stdin);
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+					if(scan==0|scan2==0|x&lt;0)
+						{
+						printf(&quot;请重新输入：\n&quot;);
+						continue;
+						}
+					break;
+				}
+				nochange_right_x=x;nochange_right_y=y;
+				printf(&quot;请输入左侧按钮逻辑坐标，用空格隔开。\n&quot;);
+				while(1)
+				{
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+					printf(&quot;&gt;&gt;&quot;);
+					scan=scanf(&quot;%d&quot;,&amp;x);
+					scan2=scanf(&quot;%d&quot;,&amp;y);
+					fflush(stdin);
+					SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+					if(scan==0|scan2==0|x&lt;0)
+						{
+						printf(&quot;请重新输入：\n&quot;);
+						continue;
+						}
+					break;
+				}
+				nochange_left_x=x;nochange_left_y=y;
+				if(nochange_left_x&gt;nochange_right_x)
+				{
+					printf(&quot;左右不分？你输入的左侧按钮坐标大于右侧按钮坐标\n&quot;);
+					goto chooseagain2;
+				}
+				printf(&quot;请输入单页阅读时间，单位秒(建议在60-120之间，至少为3)。\n&quot;);
+				while(1)
+				{
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_GREEN);
+				printf(&quot;&gt;&gt;&quot;);	
+				scan=scanf(&quot;%f&quot;,&amp;time);
+				fflush(stdin);
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+				if(scan==0|time&lt;3)
+					{
+					printf(&quot;请重新输入：\n&quot;);
+					continue;
+					}
+				break;
+				}
+				
+				time=time *  1000 ;
+				printf(&quot;开始阅读。\n&quot;);
+				while(1)
+				{
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;点击右侧按钮%d,%d\n&quot;,x,y);
+					click(x,y);
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=nochange_right_x;x&gt;=100;x--)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					//system(&quot;cls&quot;);
+					
+					
+					x=nochange_left_x;y=nochange_left_y;
+					printf(&quot;点击左侧按钮%d,%d\n&quot;,x,y);
+					click(x,y);				
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50));
+					for(x=x;x&lt;=nScreenWidth-100;x++)
+					{ 
+						move(x,y);
+						printf(&quot;移动到%d,%d\n&quot;,x,y);
+						Sleep(1);
+					} 
+					printf(&quot;移动结束，移动了%d毫秒\n&quot;,nochange_right_x-100);
+					x=nochange_right_x;y=nochange_right_y;
+					printf(&quot;开始休息%f毫秒\n&quot;,time/2-(nochange_right_x-100)/2);
+					Sleep(time/2-(nochange_right_x-50)); 
+					system(&quot;cls&quot;);
+				}
+			}
+			else if(choice2==9)
+			{
+				system(&quot;cls&quot;);
+				goto backmenu;
+			}
+			else
+			{
+				system(&quot;cls&quot;);
+				printf(&quot;未知选项，请重新输入:\n&quot;);
+				goto c2_chooseagain;
+			}
+		case 3:
+				printf(&quot;\n作者的话：\n如果可以的话还是请你认真读英语小说，本软件仅供学习研究。\n&quot;);
+				printf(&quot;关于规避掉线检测：由于网站设定，长时间不改变鼠标位置会被判定为掉线。\n&quot;);
+				printf(&quot;所以当每一页的阅读时间快到一半时，程序会让鼠标移动一段距离。\n&quot;);
+				printf(&quot;停止的地方不一定是下次点击的位置，且鼠标移动不会影响单页阅读时间。\n&quot;);
+				printf(&quot;按b返回主菜单。\n&quot;);
+				while(1)
+				{	
+				SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),FOREGROUND_INTENSITY |FOREGROUND_RED | FOREGROUND_GREEN | FOREGROUND_BLUE);
+				back=getch();
+				fflush(stdin);
+				if(back=='b')
+				{
+					system(&quot;cls&quot;);
+					goto backmenu;
+				}
+				}
+				
+		case 4:
+		default:
+			printf(&quot;未知命令，请重新输入\n&quot;);
+			goto choose_again;
+	}
+	 
+}
+
+</code></pre>
+<p>终于完工了，累死我啦😂</p>
+
+                </div>
+            </article>
+        </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://andywang425.github.io/post/c-web-English-reading/" class="post-title gt-a-link">
+                    [C语言]自动阅读英语小说
+                </a>
+            </div>
+        
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'fc96247084f493f21684',
+    clientSecret: '5db9286c52535ea6afe977101ecdf52ad7c05d13',
+    repo: 'andywang425.github.io',
+    owner: 'andywang425',
+    admin: ['andywang425'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
+
+        <div class="site-footer gt-c-content-color-first">
+    <div class="slogan gt-c-content-color-first">Everything will be all right <font color="#FED731">=)</font></div>
+    <div class="social-container">
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+    </div>
+    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://andywang425.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+    hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+</div>
+</body>
+</html>
