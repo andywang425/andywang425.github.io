@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-03-15T05:17:55.321Z</updated>
+    <updated>2020-04-06T04:55:46.859Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://andywang425.github.io/images/avatar.png</logo>
     <icon>https://andywang425.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ANDY._.WANG</rights>
+    <entry>
+        <title type="html"><![CDATA[B站直播自动抢辣条脚本]]></title>
+        <id>https://andywang425.github.io/post/b-zhan-zhi-bo-zi-dong-qiang-la-tiao-jiao-ben/</id>
+        <link href="https://andywang425.github.io/post/b-zhan-zhi-bo-zi-dong-qiang-la-tiao-jiao-ben/">
+        </link>
+        <updated>2020-04-06T04:36:44.000Z</updated>
+        <summary type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/38140-bilibiliapi/code/BilibiliAPI.js">B站自动抢辣条脚本</a>。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/38140-bilibiliapi/code/BilibiliAPI.js">B站自动抢辣条脚本</a>。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[自动阅读V2.1]]></title>
         <id>https://andywang425.github.io/post/c-web-English-reading-2_1/</id>
