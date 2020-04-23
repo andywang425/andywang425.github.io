@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-04-06T05:00:12.250Z</updated>
+    <updated>2020-04-23T05:08:31.323Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -16,9 +16,9 @@
         <link href="https://andywang425.github.io/post/biibili_Spicystrips_auto_grabber/">
         </link>
         <updated>2020-04-06T04:36:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/38140-bilibiliapi/code/BilibiliAPI.js">B站自动抢辣条脚本</a>。</p>
+        <summary type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/38140-bilibiliapi/code/BilibiliAPI.js">B站自动抢辣条脚本</a>。</p>
+        <content type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
 ]]></content>
     </entry>
     <entry>
