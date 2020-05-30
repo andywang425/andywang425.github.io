@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>[C语言]自动阅读英语小说 | ANDY._.WANG</title>
+<title>Windows Terminal配置 | ANDY._.WANG</title>
 <link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1590849509487">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
@@ -87,71 +87,38 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    [C语言]自动阅读英语小说
+                    Windows Terminal配置
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-03-11 ·
+                        · 2020-05-30 ·
                     </time>
                     
-                        <a href="https://andywang425.github.io/tag/5D87hCSND/" class="post-tags">
-                            # C语言
+                        <a href="https://andywang425.github.io/tag/trz0t_DgU/" class="post-tags">
+                            # windows terminal
                         </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>最近学校要求上一个网站读英语小说：<br>
-<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
-于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。[源码]<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a>提取码：ad00</p>
-<!-- more -->
-<pre><code class="language-c">#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-#include &lt;Windows.h&gt; 
-#include &lt;conio.h&gt;
+                    <h2 id="windwos-terminal-github下载地址httpsgithubcommicrosoftterminal">Windwos Terminal Github下载地址:<a href="https://github.com/microsoft/terminal">https://github.com/microsoft/terminal</a></h2>
+<p>下载完成后，首先将如下的文件保存，并更改为reg后缀，然后添加到注册表：</p>
+<pre><code class="language-C">Windows Registry Editor Version 5.00
  
-//模拟鼠标点击  （x,y）是要点击的位置 
-void click(int x, int y)
-{
-	//将鼠标光标移动到 指定的位置     例子中屏幕分辨率1920x900  在鼠标坐标系统中，屏幕在水平和垂直方向上均匀分割成65535×65535个单元
-	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, x*65535/1920, y*65535/1080, 0, 0);
-	
-	Sleep(50);//稍微延时50ms 
-    mouse_event(MOUSEEVENTF_LEFTDOWN,0,0,0,0);//鼠标左键按下 
-    mouse_event(MOUSEEVENTF_LEFTUP,0,0,0,0);//鼠标左键抬起
- }
- void move(int a,int b)
- {
- 	mouse_event(MOUSEEVENTF_ABSOLUTE|MOUSEEVENTF_MOVE, a*65535/1920, b*65535/1080, 0, 0);
- }
- 
-void main()
-{
-	int x1=0,y1=0;
-	int x2=0,y2=0;
-	long int t=0;
-	printf(&quot;请先进入阅读界面并调整窗口位置和大小，保持窗口置顶并不遮挡按钮。\n&quot;);
-	printf(&quot;请输入点击位置坐标，用空格隔开。1920*1080分辨率为1800 550，\n若为其它分辨率请自行推算或用程序测量。\n&quot;) ;
-	scanf(&quot;%d %d&quot;,&amp;x1,&amp;y1); 
-	x2=x1;y2=y1;//dont change 
-	printf(&quot;请输入单页阅读时间，单位毫秒(建议写60000)。\n阅读过程中鼠标会自动移动以规避检测，单页阅读时间会略大于输入值。\n请不要输入一个很小的值，否则你的鼠标就动不了了。\n本程序需要用鼠标手动退出。\n&quot;);
-	scanf(&quot;%d&quot;,&amp;t);
-	printf(&quot;开始阅读。\n&quot;);
-	while(1)
-	{
-	click(x1,y1);
-	Sleep(t/2);
-	for(x1=x2;x1&gt;=100;x1--)
-	{ 
-		move(x1,y1);
-		Sleep(1);
-	} 
-	x1=x2;y1=y2;
-	Sleep(t/2); 
- 
-	}	
-}
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt]
+@=&quot;Windows Terminal Here (&amp;T)&quot;
+&quot;Icon&quot;=&quot;C:\\Users\\your_username\\Pictures\\terminal.ico&quot;
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\wt\command]
+@=&quot;C:\\Users\\your_username\\AppData\\Local\\Microsoft\\WindowsApps\\wt.exe&quot;
 </code></pre>
-<p>目前这个程序还很简单，以后有空再优化一下。</p>
+<p>其中Icon项指向的是图标文件的位置。第二个路径为你的wt.exe程序路径。(&amp;T)为快捷键，右键出现菜单后按t即可快速打开。<br>
+然后在Windows Terminal配置文件中添加下面内容：</p>
+<pre><code class="language-C">&quot;defaults&quot;:
+    {
+        &quot;startingDirectory&quot; : &quot;.&quot;
+    },
+</code></pre>
+<p>即可实现在当前目录打开Windows Terminal。</p>
 
                 </div>
             </article>
@@ -160,8 +127,8 @@ void main()
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://andywang425.github.io/post/e-learning-notes/" class="post-title gt-a-link">
-                    易语言学习笔记
+                <a href="https://andywang425.github.io/post/biibili_Spicystrips_auto_grabber/" class="post-title gt-a-link">
+                    B站直播自动抢辣条脚本
                 </a>
             </div>
         
