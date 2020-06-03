@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>自动阅读V2.1 | ANDY._.WANG</title>
+<title>Windows网络修复工具 | ANDY._.WANG</title>
 <link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1591196909165">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
@@ -95,22 +95,149 @@
         <div class="post-detail gt-bg-theme-color-second">
             <article class="gt-post-content">
                 <h2 class="post-title">
-                    自动阅读V2.1
+                    Windows网络修复工具
                 </h2>
                 <div class="post-info">
                     <time class="post-time gt-c-content-color-first">
-                        · 2020-03-15 ·
+                        · 2020-06-03 ·
                     </time>
-                    
-                        <a href="https://andywang425.github.io/tag/5D87hCSND/" class="post-tags">
-                            # C语言
-                        </a>
                     
                 </div>
                 <div class="post-content">
-                    <p>稍微改进了一下反复翻书模式，然后加了点更多信息。</p>
+                    <p>首先分享一段github的DNS</p>
 <!-- more -->
-<p>因为改动不多就不贴源码了。以后有时间的话我打算搞一个能连续读多本书的模式（虽然用处不大hhh）。[源码]<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a> 提取码：ad00</p>
+<p>在hosts（路径为C:/WINDOWS/system32/drivers/etc/）中加入段。如果无法保存可以先把hosts文件复制出来，修改完再黏贴回去。</p>
+<pre><code class="language-C"># GitHub Start
+52.74.223.119     github.com
+192.30.253.119    gist.github.com
+54.169.195.247    api.github.com
+185.199.111.153   assets-cdn.github.com
+151.101.76.133    raw.githubusercontent.com
+151.101.108.133   user-images.githubusercontent.com
+151.101.76.133    gist.githubusercontent.com
+151.101.76.133    cloud.githubusercontent.com
+151.101.76.133    camo.githubusercontent.com
+151.101.76.133    avatars0.githubusercontent.com
+151.101.76.133    avatars1.githubusercontent.com
+151.101.76.133    avatars2.githubusercontent.com
+151.101.76.133    avatars3.githubusercontent.com
+151.101.76.133    avatars4.githubusercontent.com
+151.101.76.133    avatars5.githubusercontent.com
+151.101.76.133    avatars6.githubusercontent.com
+151.101.76.133    avatars7.githubusercontent.com
+151.101.76.133    avatars8.githubusercontent.com
+# GitHub End
+</code></pre>
+<h2 id="1上e站-本来是用于上p站的但第二个项目上p站更好">1.上E站 (本来是用于上P站的，但第二个项目上P站更好)</h2>
+<p>作者高玩梁（在b站有账号）<br>
+https://github.com/gaowanliang/NetworkRepair<br>
+主要步骤：</p>
+<ol>
+<li>从<a href="https://github.com/gaowanliang/NetworkRepair/releases">release</a>中下载对应版本。</li>
+<li>双击目录下的 ca.crt 点击 安装证书</li>
+<li>在hosts（路径为C:/WINDOWS/system32/drivers/etc/）中加入这条</li>
+</ol>
+<pre><code class="language-C">   127.0.0.1 e-hentai.org
+</code></pre>
+<p>如果还想上P站再加上以下这段</p>
+<pre><code class="language-C">#Pixiv Start
+127.0.0.1       pixiv.net 
+127.0.0.1       www.pixiv.net 
+127.0.0.1       ssl.pixiv.net
+127.0.0.1       accounts.pixiv.net 
+127.0.0.1       touch.pixiv.net
+127.0.0.1       oauth.secure.pixiv.net
+127.0.0.1       dic.pixiv.net
+127.0.0.1       en-dic.pixiv.net 
+127.0.0.1       sketch.pixiv.net
+127.0.0.1       payment.pixiv.net
+127.0.0.1       factory.pixiv.net 
+127.0.0.1       comic.pixiv.net  
+127.0.0.1       novel.pixiv.net 
+127.0.0.1       imgaz.pixiv.net 
+127.0.0.1       sensei.pixiv.net
+127.0.0.1       fanbox.pixiv.net
+127.0.0.1       source.pixiv.net
+127.0.0.1       i1.pixiv.net 
+127.0.0.1       i2.pixiv.net 
+127.0.0.1       i3.pixiv.net 
+127.0.0.1       i4.pixiv.net
+127.0.0.1       hls1.pixivsketch.net
+127.0.0.1       hls2.pixivsketch.net
+127.0.0.1       hls3.pixivsketch.net
+127.0.0.1       hls4.pixivsketch.net
+127.0.0.1       hls5.pixivsketch.net
+127.0.0.1       hls6.pixivsketch.net
+127.0.0.1       hls7.pixivsketch.net
+127.0.0.1       hls8.pixivsketch.net
+127.0.0.1       hls9.pixivsketch.net
+127.0.0.1       hls10.pixivsketch.net
+127.0.0.1       hls11.pixivsketch.net
+127.0.0.1       hls12.pixivsketch.net
+127.0.0.1       hls13.pixivsketch.net
+127.0.0.1       hls14.pixivsketch.net
+127.0.0.1       hls15.pixivsketch.net
+127.0.0.1       hls16.pixivsketch.net
+127.0.0.1       hls17.pixivsketch.net
+127.0.0.1       hls18.pixivsketch.net
+127.0.0.1       hls19.pixivsketch.net
+127.0.0.1       hls20.pixivsketch.net
+127.0.0.1       hlsa1.pixivsketch.net
+127.0.0.1       hlsa2.pixivsketch.net
+127.0.0.1       hlsa3.pixivsketch.net
+127.0.0.1       hlsa4.pixivsketch.net
+127.0.0.1       hlsa5.pixivsketch.net
+127.0.0.1       hlsa6.pixivsketch.net
+127.0.0.1       hlsa7.pixivsketch.net
+127.0.0.1       hlsa8.pixivsketch.net
+127.0.0.1       hlsa10.pixivsketch.net
+127.0.0.1       hlsa11.pixivsketch.net
+127.0.0.1       hlsa12.pixivsketch.net
+127.0.0.1       hlsa13.pixivsketch.net
+127.0.0.1       hlsa14.pixivsketch.net
+127.0.0.1       hlsa15.pixivsketch.net
+127.0.0.1       hlsa16.pixivsketch.net
+127.0.0.1       hlsa17.pixivsketch.net
+127.0.0.1       hlsa18.pixivsketch.net
+127.0.0.1       hlsa19.pixivsketch.net
+127.0.0.1       hlsc1.pixivsketch.net
+127.0.0.1       hlsc2.pixivsketch.net
+127.0.0.1       hlsc3.pixivsketch.net
+127.0.0.1       hlsc4.pixivsketch.net
+127.0.0.1       hlsc5.pixivsketch.net
+127.0.0.1       hlsc6.pixivsketch.net
+127.0.0.1       hlse1.pixivsketch.net
+127.0.0.1       hlse2.pixivsketch.net
+127.0.0.1       hlse3.pixivsketch.net
+127.0.0.1       hlse4.pixivsketch.net
+127.0.0.1       hlse5.pixivsketch.net
+127.0.0.1       hlse6.pixivsketch.net
+127.0.0.1       hlse7.pixivsketch.net
+127.0.0.1       hlse8.pixivsketch.net
+127.0.0.1       hlse9.pixivsketch.net
+127.0.0.1       hlst1.pixivsketch.net
+127.0.0.1       i.pximg.net
+127.0.0.1  app-api.pixiv.net  
+127.0.0.1    g-client-proxy.pixiv.net 
+127.0.0.1 d.pixiv.org 
+127.0.0.1  pixiv.pximg.net  
+127.0.0.1  s.pximg.net
+127.0.0.1  api.booth.pm
+127.0.0.1  myaccount.pixiv.net
+#Pixiv End
+</code></pre>
+<p>4.运行 断网修复工具.exe<br>
+若出现：</p>
+<blockquote>
+<p>listen tcp [::1]:443: bind: An attempt was made to access a socket in a way forbidden by its access permissions.</p>
+</blockquote>
+<p>等类似内容，这是端口被占用了，需要自行百度解决，比如上面的报错就是443端口被占用<br>
+通常占用443端口的是其它类似软件（VMware有一个进程也是443端口）<br>
+杀掉进程再次运行即可。</p>
+<h2 id="2-上p站">2. 上P站</h2>
+<p>https://github.com/mashirozx/Pixiv-Nginx/<br>
+现在release中下载最新的<a href="https://github.com/gaowanliang/NetworkRepair/releases">source code</a>，然后上<a href="https://2heng.xin/2017/09/19/pixiv/">作者博客</a>查看使用说明。<br>
+作者已经把使用方法讲的很详细，我就不赘述了。</p>
 
                 </div>
             </article>
@@ -119,8 +246,8 @@
         
             <div class="next-post">
                 <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://andywang425.github.io/post/c-web-English-reading-2/" class="post-title gt-a-link">
-                    自动阅读二代
+                <a href="https://andywang425.github.io/post/windows-terminal-config/" class="post-title gt-a-link">
+                    Windows Terminal配置
                 </a>
             </div>
         
