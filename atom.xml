@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-06-04T15:48:48.310Z</updated>
+    <updated>2020-06-07T15:03:51.751Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -27,9 +27,9 @@
         <link href="https://andywang425.github.io/post/NetworkRepair-For-Windows/">
         </link>
         <updated>2020-06-03T14:45:00.000Z</updated>
-        <summary type="html"><![CDATA[<p>首先分享一段github的DNS</p>
+        <summary type="html"><![CDATA[<p>首先分享一段github的DNS，否则接下来下载项目的时候可能会很慢</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>首先分享一段github的DNS</p>
+        <content type="html"><![CDATA[<p>首先分享一段github的DNS，否则接下来下载项目的时候可能会很慢</p>
 ]]></content>
     </entry>
     <entry>
@@ -127,13 +127,5 @@
         <link href="https://andywang425.github.io/post/DANCING_LINE_OST/">
         </link>
         <updated>2020-03-06T11:02:04.000Z</updated>
-        <summary type="html"><![CDATA[<h3 id="1all-about-us">1.all about us</h3>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=3&id=2065893939&auto=0&height=66"></iframe>  
-<p>BPM = 84</p>
-]]></summary>
-        <content type="html"><![CDATA[<h3 id="1all-about-us">1.all about us</h3>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="https://music.163.com/outchain/player?type=3&id=2065893939&auto=0&height=66"></iframe>  
-<p>BPM = 84</p>
-]]></content>
     </entry>
 </feed>
