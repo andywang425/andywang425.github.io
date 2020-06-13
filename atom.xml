@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-06-07T15:03:51.751Z</updated>
+    <updated>2020-06-13T04:46:54.138Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -11,7 +11,14 @@
     <icon>https://andywang425.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ANDY._.WANG</rights>
     <entry>
-        <title type="html"><![CDATA[bilibili友爱社汇总]]></title>
+        <title type="html"><![CDATA[bilibili友爱社汇总20200613]]></title>
+        <id>https://andywang425.github.io/post/bilibili-you-ai-she-stat-2020-6-13/</id>
+        <link href="https://andywang425.github.io/post/bilibili-you-ai-she-stat-2020-6-13/">
+        </link>
+        <updated>2020-06-13T04:44:37.000Z</updated>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[bilibili友爱社汇总20200517]]></title>
         <id>https://andywang425.github.io/post/bilibili-you-ai-she-stat-2020-5-17/</id>
         <link href="https://andywang425.github.io/post/bilibili-you-ai-she-stat-2020-5-17/">
         </link>
@@ -120,12 +127,5 @@
         <content type="html"><![CDATA[<h3 id="1相关工具">1.相关工具</h3>
 <p>易语言5.9，易用API伴侣，精易编程助手3.97，精易模块8.1.0，VC98linker</p>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[跳舞的线游戏原声]]></title>
-        <id>https://andywang425.github.io/post/DANCING_LINE_OST/</id>
-        <link href="https://andywang425.github.io/post/DANCING_LINE_OST/">
-        </link>
-        <updated>2020-03-06T11:02:04.000Z</updated>
     </entry>
 </feed>
