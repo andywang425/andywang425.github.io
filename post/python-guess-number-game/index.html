@@ -3,7 +3,7 @@
     <meta charset="utf-8"/>
 <meta name="description" content=""/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>ANDY._.WANG</title>
+<title>[python]猜数字小游戏 | ANDY._.WANG</title>
 <link rel="shortcut icon" href="https://andywang425.github.io/favicon.ico?v=1592659124567">
 <link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
 <link rel="stylesheet" href="https://andywang425.github.io/styles/main.css">
@@ -30,11 +30,11 @@
 
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 </head>
 <body>
 <div class="main gt-bg-theme-color-first">
-    <div class="main-content">
-        <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg">
     <div class="navbar-brand">
         <img class="user-avatar" src="/images/avatar.png" alt="头像">
         <div class="site-name gt-c-content-color-first">
@@ -83,34 +83,98 @@
         </div>
     </div>
 </nav>
+    <div class="post-container">
+        <div class="post-detail gt-bg-theme-color-second">
+            <article class="gt-post-content">
+                <h2 class="post-title">
+                    [python]猜数字小游戏
+                </h2>
+                <div class="post-info">
+                    <time class="post-time gt-c-content-color-first">
+                        · 2020-06-20 ·
+                    </time>
+                    
+                        <a href="https://andywang425.github.io/tag/Qs9r55kUU/" class="post-tags">
+                            # python
+                        </a>
+                    
+                </div>
+                <div class="post-content">
+                    <p>random模块：<code>random.randint(0, 100)</code> 生成一个0到100的整数。<br>
+<code>str.upper() str.lower()</code> 字符串大小写转换。</p>
+<!-- more -->
+<pre><code class="language-python">import random
 
-        <div class="tags-container">
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/Qs9r55kUU/">#python</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/2IfnnqY9q/">#bilibili</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/Uwrndssg7/">#SNI Bypass</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/trz0t_DgU/">#windows terminal</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/VseXBYkAc/">#javascript</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/5D87hCSND/">#C语言</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/VqPp91UJo/">#易语言</a>
-            
-                <a class="tag gt-c-content-color-first gt-a-link"
-                   href="https://andywang425.github.io/tag/AUrenmuie/">#跳舞的线</a>
-            
+print(&quot;------猜数字小游戏------&quot;)
+target = random.randint(0, 100)
+maxTry = 5
+tryTime = 1
+num = int(input(&quot;已生成一个0-100之间的随机数，共5次机会。\n请输入:&quot;))
+while num != target:
+    if tryTime != maxTry:
+        if num &gt; target:
+            print(&quot;大了,还剩%d次机会&quot; % (maxTry - tryTime))
+            tryTime += 1
+            num = int(input())
+        else:
+            print(&quot;小了,还剩%d次机会&quot; % (maxTry - tryTime))
+            tryTime += 1
+            num = int(input())
+    else:
+        print(&quot;Game Over!\nPlay Again?(Y/N)&quot;)
+        if input().upper() == 'Y':
+            target = random.randint(0, 100)
+            maxTry = 5
+            tryTime = 1
+            num = int(input(&quot;已生成一个0-100之间的随机数，共5次机会。\n请输入:&quot;))
+            continue
+        else:
+            exit(0)
+print(&quot;You win!&quot;)
+input()
+
+</code></pre>
+
+                </div>
+            </article>
         </div>
+
+        
+            <div class="next-post">
+                <div class="next gt-c-content-color-first">下一篇</div>
+                <a href="https://andywang425.github.io/post/bilibili-you-ai-she-stat-2020-6-13/" class="post-title gt-a-link">
+                    bilibili友爱社汇总20200613
+                </a>
+            </div>
+        
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: 'fc96247084f493f21684',
+    clientSecret: '5db9286c52535ea6afe977101ecdf52ad7c05d13',
+    repo: 'andywang425.github.io',
+    owner: 'andywang425',
+    admin: ['andywang425'],
+    id: location.pathname,      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+            
+
+            
+        
 
         <div class="site-footer gt-c-content-color-first">
     <div class="slogan gt-c-content-color-first">Everything will be all right <font color="#FED731">=)</font></div>
@@ -135,6 +199,7 @@
 <script>
     hljs.initHighlightingOnLoad()
 </script>
+
 
     </div>
 </div>
