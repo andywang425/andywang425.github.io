@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://andywang425.github.io</id>
     <title>ANDY._.WANG</title>
-    <updated>2020-06-20T13:18:51.486Z</updated>
+    <updated>2020-06-25T05:53:51.846Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://andywang425.github.io"/>
     <link rel="self" href="https://andywang425.github.io/atom.xml"/>
@@ -10,6 +10,28 @@
     <logo>https://andywang425.github.io/images/avatar.png</logo>
     <icon>https://andywang425.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, ANDY._.WANG</rights>
+    <entry>
+        <title type="html"><![CDATA[B站直播自动抢辣条]]></title>
+        <id>https://andywang425.github.io/post/Bilibili-SGTH/</id>
+        <link href="https://andywang425.github.io/post/Bilibili-SGTH/">
+        </link>
+        <updated>2020-06-25T05:48:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>以前看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。然后又偶然间发现了SeaLoong的<a href="https://github.com/SeaLoong/Bilibili-LRHH">Bilibili-LRHH</a>。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>以前看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。然后又偶然间发现了SeaLoong的<a href="https://github.com/SeaLoong/Bilibili-LRHH">Bilibili-LRHH</a>。</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[B站直播自动抢辣条]]></title>
+        <id>https://andywang425.github.io/post/b-zhan-zhi-bo-zi-dong-qiang-la-tiao/</id>
+        <link href="https://andywang425.github.io/post/b-zhan-zhi-bo-zi-dong-qiang-la-tiao/">
+        </link>
+        <updated>2020-06-25T05:48:01.000Z</updated>
+        <summary type="html"><![CDATA[<p>以前看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>以前看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[[python]猜数字小游戏]]></title>
         <id>https://andywang425.github.io/post/python-guess-number-game/</id>
@@ -65,9 +87,11 @@
         <link href="https://andywang425.github.io/post/biibili_Spicystrips_auto_grabber/">
         </link>
         <updated>2020-04-06T04:36:44.000Z</updated>
-        <summary type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
+        <summary type="html"><![CDATA[<h3 id="现在这个脚本因恶意举报被管理员删除账号也被封了-greasyfork的审核真的一言难尽">现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽</h3>
+<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
 ]]></summary>
-        <content type="html"><![CDATA[<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
+        <content type="html"><![CDATA[<h3 id="现在这个脚本因恶意举报被管理员删除账号也被封了-greasyfork的审核真的一言难尽">现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽</h3>
+<p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
 ]]></content>
     </entry>
     <entry>
@@ -98,34 +122,6 @@
 2.提供两种阅读模式：顺序阅读和反复翻书<br>
 3.界面优化，更加好看<br>
 4.错误输入处理</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[[C语言]自动阅读英语小说]]></title>
-        <id>https://andywang425.github.io/post/c-web-English-reading/</id>
-        <link href="https://andywang425.github.io/post/c-web-English-reading/">
-        </link>
-        <updated>2020-03-11T14:03:02.000Z</updated>
-        <summary type="html"><![CDATA[<p>最近学校要求上一个网站读英语小说：<br>
-<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
-于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。[源码]<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a>提取码：ad00</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>最近学校要求上一个网站读英语小说：<br>
-<a href="https://home.slz.cnpereading.com/">https://home.slz.cnpereading.com/</a><br>
-于是我就想写个程序来读🤣其实这个程序并不复杂，主要就是靠调用windows api来控制鼠标移动和单击。[源码]<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a>提取码：ad00</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[易语言学习笔记]]></title>
-        <id>https://andywang425.github.io/post/e-learning-notes/</id>
-        <link href="https://andywang425.github.io/post/e-learning-notes/">
-        </link>
-        <updated>2020-03-09T14:39:11.000Z</updated>
-        <summary type="html"><![CDATA[<p>觅风易语言全套视频教程：<a href="https://www.bilibili.com/video/av29459575">https://www.bilibili.com/video/av29459575</a><br>
-源码：<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a>提取码：ad00</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>觅风易语言全套视频教程：<a href="https://www.bilibili.com/video/av29459575">https://www.bilibili.com/video/av29459575</a><br>
-源码：<a href="https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA">https://pan.baidu.com/s/1PxzVNncmXGFtKCBwzk6HOA</a>提取码：ad00</p>
 ]]></content>
     </entry>
 </feed>
