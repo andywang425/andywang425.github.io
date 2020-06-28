@@ -1,106 +1,101 @@
 <html>
-<head>
-    <meta charset="utf-8"/>
-<meta name="description" content=""/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>B站直播自动抢辣条脚本 | ANDY._.WANG</title>
-<link rel="shortcut icon" href="https://andywang425.gitee.io/favicon.ico?v=1593346018264">
-<link href="https://cdn.bootcss.com/font-awesome/5.11.2/css/all.css" rel="stylesheet">
+<link rel="shortcut icon" href="https://andywang425.gitee.io/favicon.ico?v=1593346145982">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://andywang425.gitee.io/styles/main.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/dart.min.js"></script>
-<script src="https://cdn.bootcss.com/highlight.js/9.15.10/languages/go.min.js"></script>
-<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
-<!-- DEMO JS -->
-<script src="media/scripts/index.js"></script>
+<link rel="alternate" type="application/atom+xml" title="B站直播自动抢辣条脚本 | ANDY._.WANG - Atom Feed" href="https://andywang425.gitee.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
+    <meta name="description" content="现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽
+昨天看到逆回十六夜在greasyfork.org上发布了一个B站自动抢辣条脚本。
+
+但是这个脚本有直播间限制，而且有些地方我觉得可以优化。于是自己..." />
+    <meta name="keywords" content="javascript" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
-</head>
-<body>
-<div class="main gt-bg-theme-color-first">
-    <nav class="navbar navbar-expand-lg">
-    <div class="navbar-brand">
-        <img class="user-avatar" src="/images/avatar.png" alt="头像">
-        <div class="site-name gt-c-content-color-first">
-            ANDY._.WANG
-        </div>
-    </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <i class="fas fa-bars gt-c-content-color-first" style="font-size: 18px"></i>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <div class="navbar-nav mr-auto" style="text-align: center">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://andywang425.gitee.io">
+  <img class="avatar" src="https://andywang425.gitee.io/images/avatar.png?v=1593346145982" alt="">
+  </a>
+  <h1 class="site-title">
+    ANDY._.WANG
+  </h1>
+  <p class="site-description">
+    Everything will be all right <font color="#FED731">=)</font>
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="https://andywang425.github.io" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              B站直播自动抢辣条脚本
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-04-06
+              </span>
+              <span>
+                1 min read
+              </span>
+              
+                <a href="https://andywang425.gitee.io/tag/VseXBYkAc/" class="post-tag">
+                  # javascript
+                </a>
+              
+            </div>
             
-                <div class="nav-item">
-                    
-                        <a href="https://andywang425.github.io" class="menu gt-a-link">
-                            首页
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/archives" class="menu gt-a-link">
-                            归档
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/tags" class="menu gt-a-link">
-                            标签
-                        </a>
-                    
-                </div>
-            
-                <div class="nav-item">
-                    
-                        <a href="/post/about" class="menu gt-a-link">
-                            关于
-                        </a>
-                    
-                </div>
-            
-        </div>
-    </div>
-</nav>
-    <div class="post-container">
-        <div class="post-detail gt-bg-theme-color-second">
-            <article class="gt-post-content">
-                <h2 class="post-title">
-                    B站直播自动抢辣条脚本
-                </h2>
-                <div class="post-info">
-                    <time class="post-time gt-c-content-color-first">
-                        · 2020-04-06 ·
-                    </time>
-                    
-                        <a href="https://andywang425.gitee.io/tag/VseXBYkAc/" class="post-tags">
-                            # javascript
-                        </a>
-                    
-                </div>
-                <div class="post-content">
-                    <h3 id="现在这个脚本因恶意举报被管理员删除账号也被封了-greasyfork的审核真的一言难尽">现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽</h3>
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h3 id="现在这个脚本因恶意举报被管理员删除账号也被封了-greasyfork的审核真的一言难尽">现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽</h3>
 <p>昨天看到逆回十六夜在<a href="greasyfork.org">greasyfork.org</a>上发布了一个<a href="https://greasyfork.org/scripts/381907-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1%E4%BA%8C%E4%BB%A3by%E5%8D%81%E5%85%AD%E5%A4%9C">B站自动抢辣条脚本</a>。</p>
 <!-- more -->
 <p>但是这个脚本有直播间限制，而且有些地方我觉得可以优化。于是自己重新做了个修改版，在原先基础上做了些改进，如整合API，并添加了新功能。脚本在<a href="greasyfork.org">greasyfork.org</a>上发布，名字叫<a href="https://greasyfork.org/en/scripts/403985-b%E7%AB%99%E7%9B%B4%E6%92%AD%E8%87%AA%E5%8A%A8%E6%8A%A2%E8%BE%A3%E6%9D%A1">B站直播自动抢辣条</a>。<br>
@@ -109,22 +104,39 @@
 <pre><code> 最后，再次感谢SeaLoong提供的BilibiliAPI v1.4.6。本脚本的BilibiliAPI_mod为在此基础上的修改版。</code></pre>
 </blockquote>
 
-                </div>
-            </article>
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#%E7%8E%B0%E5%9C%A8%E8%BF%99%E4%B8%AA%E8%84%9A%E6%9C%AC%E5%9B%A0%E6%81%B6%E6%84%8F%E4%B8%BE%E6%8A%A5%E8%A2%AB%E7%AE%A1%E7%90%86%E5%91%98%E5%88%A0%E9%99%A4%E8%B4%A6%E5%8F%B7%E4%B9%9F%E8%A2%AB%E5%B0%81%E4%BA%86-greasyfork%E7%9A%84%E5%AE%A1%E6%A0%B8%E7%9C%9F%E7%9A%84%E4%B8%80%E8%A8%80%E9%9A%BE%E5%B0%BD">现在这个脚本因恶意举报被管理员删除，账号也被封了。。。greasyfork的审核真的一言难尽</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
         </div>
 
         
-            <div class="next-post">
-                <div class="next gt-c-content-color-first">下一篇</div>
-                <a href="https://andywang425.gitee.io/post/c-web-English-reading-2_1/" class="post-title gt-a-link">
-                    自动阅读V2.1
-                </a>
-            </div>
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://andywang425.gitee.io/post/c-web-English-reading-2_1/">
+              <h3 class="post-title">
+                自动阅读V2.1
+              </h3>
+            </a>
+          </div>
         
 
         
-            
-                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
 <div id="gitalk-container"></div>
@@ -137,7 +149,7 @@
     repo: 'andywang425.github.io',
     owner: 'andywang425',
     admin: ['andywang425'],
-    id: location.pathname,      // Ensure uniqueness and length less than 50
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
     distractionFreeMode: false  // Facebook-like distraction free mode
   })
 
@@ -145,37 +157,60 @@
 
 </script>
 
-            
+          
 
-            
+          
         
 
-        <div class="site-footer gt-c-content-color-first">
-    <div class="slogan gt-c-content-color-first">Everything will be all right <font color="#FED731">=)</font></div>
-    <div class="social-container">
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-            
-        
-    </div>
-    Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a href="https://andywang425.gitee.io/atom.xml" target="_blank">RSS</a>
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://andywang425.gitee.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
 </div>
 
-<script>
-    hljs.initHighlightingOnLoad()
-</script>
-
-
+      </div>
     </div>
-</div>
-</body>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
 </html>
